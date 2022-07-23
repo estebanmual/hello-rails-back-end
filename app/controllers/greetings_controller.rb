@@ -1,5 +1,5 @@
 class ApisController < ApplicationController
-  def show
+  def index
     greetings = Greeting.all
     index = Random.rand(0..4)
     greeting = greetings[index]
@@ -7,6 +7,4 @@ class ApisController < ApplicationController
       format.json { render json: greeting }
     end
   end
-
-  def index; end
 end
